@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NotasApp</string>
+    <string name="exposiciones">Exposiciones</string>
+    <string name="practicas">Prácticas</string>
+    <string name="proyecto">Proyecto</string>
+    <string name="calcular">Calcular</string>
+    <string name="notafinal">Nota Final</string>
+    <string name="titulo">Porcentajes</string>
+    <string name="guardar">Guardar</string>
+    <string name="configurar">Configurar</string>
+</resources>
