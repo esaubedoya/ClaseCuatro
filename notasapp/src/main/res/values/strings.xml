@@ -8,4 +8,8 @@
     <string name="titulo">Porcentajes</string>
     <string name="guardar">Guardar</string>
     <string name="configurar">Configurar</string>
-</resources>
+    <string name="limpiar">Limpiar</string>
+    <string name="pexpo">Exposiciones (%)</string>
+    <string name="pprac">Prácticas (%)</string>
+    <string name="pproy">Proyecto (%)</string>
+   </resources>

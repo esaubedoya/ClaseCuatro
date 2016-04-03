@@ -20,49 +20,88 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/exposiciones"
-            android:textSize="20sp"/>
+            android:text="@string/pexpo"
+            android:textSize="20dp"/>
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/epExpo"/>
+            android:id="@+id/epExpo"
+            android:inputType="numberDecimal"
+            android:textSize="20dp"/>
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/practicas"
-            android:textSize="20sp"/>
+            android:text="@string/pprac"
+            android:textSize="20dp"/>
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/epPrac"/>
+            android:id="@+id/epPrac"
+            android:inputType="numberDecimal"
+            android:textSize="20dp"/>
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/proyecto"
-            android:textSize="20sp"/>
+            android:text="@string/pproy"
+            android:textSize="20dp"/>
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:id="@+id/epProy"/>
 
     </LinearLayout>
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/guardar"
-        android:id="@+id/bGuarad"/>
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/guardar"
+            android:id="@+id/bGuarad"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/limpiar"
+            android:id="@+id/bLimPor"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/red"
+            android:textAlignment="center"
+            android:id="@+id/tErPor"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>
