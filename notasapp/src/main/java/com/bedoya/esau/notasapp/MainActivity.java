@@ -1,11 +1,13 @@
 package com.bedoya.esau.notasapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 double nexpo, npra, npro, nota;
 
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(eProy.getWindowToken(), 0);
+
                 if (eExpo.getText().toString().length() == 0 || eProy.getText().toString().length() == 0 || ePrac.getText().toString().length() == 0)
                     tError.setText("Faltan Datos");
                 else {
@@ -63,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         bClean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(eProy.getWindowToken(), 0);
                 ePrac.setText("");
                 eProy.setText("");
                 eExpo.setText("");

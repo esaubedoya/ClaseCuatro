@@ -1,9 +1,11 @@
 package com.bedoya.esau.notasapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,8 +37,11 @@ public class SettingsActivity extends AppCompatActivity {
         bGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(epProy.getWindowToken(), 0);
 
-                if (epPrac.getText().toString().length() == 0 || epProy.getText().toString().length() == 0 || epExpo.getText().toString().length() == 0)
+
+               if (epPrac.getText().toString().length() == 0 || epProy.getText().toString().length() == 0 || epExpo.getText().toString().length() == 0)
                     tErrPor.setText("Faltan Datos");
                 else if ((Double.parseDouble(epExpo.getText().toString()) + Double.parseDouble(epPrac.getText().toString()) +
                         Double.parseDouble(epProy.getText().toString())) != 100)
@@ -57,6 +62,8 @@ public class SettingsActivity extends AppCompatActivity {
         bClean2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(epProy.getWindowToken(), 0);
                 epPrac.setText("");
                 epProy.setText("");
                 epExpo.setText("");
